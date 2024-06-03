@@ -1,0 +1,24 @@
+<resources>
+    <string name="app_name">TV Cast</string>
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+    <string name="nav_header_title">Android Studio</string>
+    <string name="nav_header_subtitle">android.studio@android.com</string>
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="action_settings">Settings</string>
+
+    <string name="menu_home">Home</string>
+    <string name="menu_gallery">Gallery</string>
+    <string name="menu_slideshow">Slideshow</string>
+
+
+    <string name="adjust_id">9c6p0svits00</string>
+    <string name="facebook_app_id">477151143987408</string>
+    <string name="firebase_id">1:1094224238014:android:baf022c4edddd438b8d5ef</string>
+    <string name="tv_30">TV from 30\"-40\"</string>
+    <string name="tv_41">TV from 41\"-50\"</string>
+    <string name="tv_51">TV from 51\"-60\"</string>
+    <string name="tv_61">TV from 61\"-100\"</string>
+    <string name="public_sdk_key">public_live_AGdQoDYU.09vPTxBGQPuP5kjjajtR</string>
+
+</resources>

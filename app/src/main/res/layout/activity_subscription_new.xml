@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/tt_white"
+    android:orientation="vertical"
+    tools:context=".SubscriptionActivity">
+
+    <LinearLayout
+        android:id="@+id/linear"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".68"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:background="@drawable/subscription_bg_1"
+        android:weightSum="1"
+        android:orientation="vertical"/>
+    <TextView
+        android:id="@+id/tv_trail"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".07"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:fontFamily="@font/lato_semibold"
+        android:text="Unlimited free access for 3 days,\nthen [$XX.XX] per [Time]"
+        android:textAlignment="center"
+        android:layout_marginTop="20dp"
+        android:textSize="16sp"
+        android:textColor="#123049"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/linear"/>
+    <TextView
+        android:id="@+id/tv_desc"
+        android:layout_width="wrap_content"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".05"
+        android:layout_gravity="center"
+        android:fontFamily="@font/lato_semibold"
+        android:text="Auto-renewable, Cancel anytime"
+        android:textAlignment="center"
+        android:textColor="#737373"
+        android:gravity="center"
+        android:textSize="12sp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/tv_trail"/>
+    <Button
+        android:id="@+id/trial_btn"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".07"
+        android:layout_alignParentTop="true"
+        android:layout_marginHorizontal="18dp"
+        android:background="@drawable/button_ob_continue"
+        android:backgroundTint="#499AFF"
+        android:fontFamily="@font/avenir_black"
+        android:text="TRY NOW FOR FREE"
+        android:textAllCaps="true"
+        android:textColor="#ffffff"
+        android:textSize="17sp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_desc"
+        app:layout_constraintEnd_toEndOf="parent"/>
+    <!--Policy Section-->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintHeight_percent=".1"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/trial_btn"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="152dp"
+            android:layout_height="35dp"
+            android:layout_gravity="center"
+            android:layout_marginTop="7dp"
+            android:src="@drawable/ic_play_protect" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_marginTop="10dp"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/tv_policy"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:gravity="center|end"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:fontFamily="@font/inter_regular"
+                android:text="Privacy Policies"
+                android:textAlignment="textEnd"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+
+            <TextView
+                android:id="@+id/tv_terms"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:layout_gravity="center"
+                android:layout_marginLeft="25dp"
+                android:layout_weight="0.5"
+                android:gravity="center|start"
+                android:background="?android:attr/selectableItemBackground"
+                android:clickable="true"
+                android:focusable="true"
+                android:paddingStart="30dp"
+                android:fontFamily="@font/inter_regular"
+                android:text="Terms &amp; Conditions"
+                android:textColor="#000000"
+                android:textSize="10sp" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+    <RelativeLayout
+        android:id="@+id/ic_close"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_marginTop="25dp"
+        android:layout_marginStart="25dp"
+        android:background="?android:attr/selectableItemBackground"
+        android:clickable="true"
+        android:focusable="true"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <ImageView
+            android:layout_width="15dp"
+            android:layout_height="15dp"
+            android:layout_centerInParent="true"
+            android:clickable="false"
+            android:src="@drawable/ic_cross_blue" />
+
+    </RelativeLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

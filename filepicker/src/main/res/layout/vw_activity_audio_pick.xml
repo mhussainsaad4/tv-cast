@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:background="#ffffff">
+
+    <include android:id="@+id/tb_pick"
+        layout="@layout/vw_layout_top_bar" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_audio_pick"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/tb_pick"
+        android:layout_above="@+id/bannerContainer"
+        tools:listitem="@layout/vw_layout_item_audio_pick"/>
+
+    <FrameLayout
+        android:id="@+id/bannerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:layout_alignParentBottom="true" />
+
+</RelativeLayout>

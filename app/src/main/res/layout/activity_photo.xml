@@ -1,0 +1,185 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:id="@+id/imageView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:src="@drawable/back_btn"
+        app:layout_constraintBottom_toBottomOf="@id/title"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/title" />
+
+    <TextView
+        android:id="@+id/title"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="4dp"
+        android:text="Photo"
+        android:textColor="@color/tt_black"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/remote_casting"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:src="@drawable/mirroring"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <com.google.android.material.card.MaterialCardView
+        android:id="@+id/cast_card"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        app:cardCornerRadius="12dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/title">
+
+        <ImageView
+            android:id="@+id/cast_image"
+            android:layout_width="230dp"
+            android:layout_height="150dp"
+            android:scaleType="fitXY"
+            android:src="@drawable/mirroring" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rcv_image"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="12dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/cast_card" />
+
+    <View
+        android:id="@+id/control_view"
+        android:layout_width="0dp"
+        android:layout_height="60dp"
+        android:layout_marginStart="12dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="12dp"
+        android:background="@drawable/bg_rounded_light"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/rcv_image" />
+
+    <ImageView
+        android:id="@+id/imageView3"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="start"
+        android:layout_marginStart="32dp"
+        android:src="@drawable/image_backward"
+        app:layout_constraintBottom_toBottomOf="@id/control_view"
+        app:layout_constraintStart_toStartOf="@+id/control_view"
+        app:layout_constraintTop_toTopOf="@+id/control_view" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/paly_icon"
+        android:padding="8dp"
+        android:background="@drawable/bg_circular_blue"
+        app:layout_constraintBottom_toBottomOf="@id/control_view"
+        app:layout_constraintEnd_toEndOf="@id/control_view"
+        app:layout_constraintStart_toStartOf="@id/control_view"
+        app:layout_constraintTop_toTopOf="@id/control_view" />
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="32dp"
+        android:src="@drawable/image_forward"
+        app:layout_constraintBottom_toBottomOf="@id/control_view"
+        app:layout_constraintEnd_toEndOf="@id/control_view"
+        app:layout_constraintTop_toTopOf="@id/control_view" />
+
+    <ImageView
+        android:id="@+id/img_pause"
+        android:layout_width="60dp"
+        android:layout_height="85dp"
+        android:layout_marginTop="42dp"
+        android:background="@drawable/bg_rounded_light"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="18dp"
+        android:src="@drawable/stop_icon"
+        app:layout_constraintStart_toStartOf="@+id/control_view"
+        app:layout_constraintTop_toBottomOf="@+id/control_view" />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="6dp"
+        android:text="Stop"
+        android:textColor="@color/tt_black"
+        app:layout_constraintBottom_toBottomOf="@+id/img_pause"
+        app:layout_constraintEnd_toEndOf="@+id/img_pause"
+        app:layout_constraintStart_toStartOf="@id/img_pause" />
+
+    <ImageView
+        android:id="@+id/img_remote"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_rounded_light"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="18dp"
+        android:src="@drawable/remote_icon"
+        app:layout_constraintBottom_toBottomOf="@+id/img_pause"
+        app:layout_constraintEnd_toStartOf="@id/img_rotate"
+        app:layout_constraintHorizontal_bias="0.47"
+        app:layout_constraintStart_toEndOf="@id/img_pause"
+        app:layout_constraintTop_toTopOf="@+id/img_pause"
+      />
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Remote"
+        android:textColor="@color/tt_black"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintStart_toStartOf="@id/img_remote"
+        app:layout_constraintEnd_toEndOf="@+id/img_remote"
+        app:layout_constraintBottom_toBottomOf="@+id/img_remote"
+        />
+
+    <ImageView
+        android:id="@+id/img_rotate"
+        android:layout_width="60dp"
+        android:layout_height="0dp"
+        android:background="@drawable/bg_rounded_light"
+        android:paddingHorizontal="12dp"
+        android:paddingTop="12dp"
+        android:paddingBottom="18dp"
+        android:src="@drawable/rotate_icon"
+        app:layout_constraintBottom_toBottomOf="@id/img_pause"
+        app:layout_constraintEnd_toEndOf="@id/control_view"
+        app:layout_constraintTop_toTopOf="@id/img_pause" />
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rotate"
+        android:textColor="@color/tt_black"
+        android:layout_marginBottom="6dp"
+        app:layout_constraintStart_toStartOf="@id/img_rotate"
+        app:layout_constraintEnd_toEndOf="@+id/img_rotate"
+        app:layout_constraintBottom_toBottomOf="@+id/img_rotate"
+        />
+</androidx.constraintlayout.widget.ConstraintLayout>

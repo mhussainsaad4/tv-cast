@@ -1,0 +1,3 @@
+include ':nanohttpd'
+include ':app', ':filepicker',  ':Connect-SDK-Android'
+rootProject.name = "My TV Cast"

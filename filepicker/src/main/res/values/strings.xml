@@ -1,0 +1,13 @@
+<resources>
+    <string name="vw_confirm">DONE</string>
+    <string name="vw_no_video_play_app">No App exists for playing video!</string>
+    <string name="vw_record_audio">Record Audio</string>
+    <string name="vw_rationale_storage">Need Reading Storage Permission for Picking Files</string>
+    <string name="vw_camera_permission">Need Camera Permission for Taking Photos and Videos</string>
+    <string name="vw_up_to_max">Already up to max</string>
+    <string name="vw_no_photo_app">No photo App in this phone!</string>
+    <string name="vw_no_audio_play_app">No App exists for playing audio!</string>
+    <string name="vw_no_video_app">No video App in this phone!</string>
+    <string name="vw_no_audio_app">No audio App in this phone!</string>
+    <string name="vw_all">All</string>
+</resources>

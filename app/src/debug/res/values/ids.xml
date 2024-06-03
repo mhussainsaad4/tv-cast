@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+
+    <string name="admob_open_ad_id" translatable="false">ca-app-pub-3940256099942544/9257395921</string>
+    <string name="native_ad_1" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+    <string name="native_ad_2" translatable="false">ca-app-pub-3940256099942544/2247696110</string>
+
+</resources>

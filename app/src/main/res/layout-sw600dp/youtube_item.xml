@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="120dp"
+    android:clickable="true"
+    android:background="?attr/selectableItemBackground"
+    android:orientation="horizontal">
+
+    <ImageView
+        android:id="@+id/image_preview"
+        android:layout_width="120dp"
+        android:layout_height="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginStart="10dp"
+        android:layout_marginEnd="10dp"
+        android:scaleType="centerCrop"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1"
+        android:layout_marginBottom="5dp"
+        android:layout_marginEnd="10dp"
+        android:layout_marginRight="10dp">
+
+        <TextView
+            android:id="@+id/tv_name_video"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="jasmnbdv,amsdv m,adsvamds "
+            android:layout_alignParentTop="true"
+            android:maxLines="3"
+            android:textColor="@android:color/black"
+            android:textSize="22sp"
+            android:fontFamily="@font/lato_semibold"/>
+
+        <TextView
+            android:id="@+id/tv_name_autor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignParentBottom="true"
+            android:text="mndbdmn"
+            android:minHeight="20dp"
+            android:layout_below="@id/tv_name_video"
+            android:textSize="18sp"/>
+
+
+    </RelativeLayout>
+
+</LinearLayout>

@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <item name="item_click_support" type="id" />
+
+
+    <string name="admob_open_ad_id" translatable="false">ca-app-pub-4665610594862277/2883350495</string>
+
+    <string name="native_ad_1" translatable="false">ca-app-pub-4665610594862277/3068035949</string>
+    <string name="native_ad_2" translatable="false">ca-app-pub-4665610594862277/8171085164</string>
+
+
+</resources>

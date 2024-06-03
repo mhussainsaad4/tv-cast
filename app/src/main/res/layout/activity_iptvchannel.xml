@@ -1,0 +1,290 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".IPTVChannelActivity">
+
+    <include android:id="@+id/includedToolbar"
+        layout="@layout/vw_layout_top_bar" />
+
+    <LinearLayout
+        android:id="@+id/dataLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_below="@id/includedToolbar"
+        android:layout_above="@+id/bannerContainer">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:layout_marginVertical="5dp"
+            android:gravity="center_vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_spinner"
+                android:layout_marginVertical="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:elevation="5dp"
+                android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/categorySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:overlapAnchor="false"/>
+
+                <ImageView
+                    android:layout_gravity="center_vertical|end"
+                    android:contentDescription="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vw_ic_arrow_down"
+                    android:layout_marginEnd="15dp"
+                    app:tint="@color/new_text_color"/>
+            </FrameLayout>
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_spinner"
+                android:layout_marginVertical="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:elevation="5dp"
+                android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/languageSpinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:overlapAnchor="false"/>
+
+                <ImageView
+                    android:layout_gravity="center_vertical|end"
+                    android:contentDescription="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vw_ic_arrow_down"
+                    android:layout_marginEnd="15dp"
+                    app:tint="@color/new_text_color"/>
+            </FrameLayout>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <FrameLayout
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_spinner"
+                android:layout_marginTop="5dp"
+                android:layout_marginBottom="5dp"
+                android:layout_marginStart="10dp"
+                android:layout_marginEnd="5dp"
+                android:elevation="5dp"
+                android:layout_weight="1">
+
+            <androidx.appcompat.widget.AppCompatSpinner
+                android:id="@+id/countrySpinner"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:textAlignment="center"
+                android:overlapAnchor="false"/>
+
+                <ImageView
+                    android:layout_gravity="center_vertical|end"
+                    android:contentDescription="@null"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/vw_ic_arrow_down"
+                    android:layout_marginEnd="15dp"
+                    app:tint="@color/new_text_color"/>
+            </FrameLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:elevation="5dp"
+                android:layout_weight="1"
+                android:weightSum="2"
+                android:clipChildren="false">
+
+                <FrameLayout
+                    android:id="@+id/flShowFavChannelBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_spinner"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="5dp"
+                    android:layout_weight="1">
+
+                    <ImageView
+                        android:id="@+id/ivFavBtn"
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_fav"
+                        android:layout_gravity="center"
+                        app:tint="@color/new_text_color"/>
+                </FrameLayout>
+
+                <FrameLayout
+                    android:id="@+id/flRewardAdBtn"
+                    android:layout_width="match_parent"
+                    android:layout_height="35dp"
+                    android:background="@drawable/bg_x_mins"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="10dp"
+                    android:layout_marginTop="5dp"
+                    android:layout_marginBottom="5dp"
+                    android:elevation="5dp"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/tvRewardAdTime"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="X min"
+                        android:textColor="#FFFFFF"
+                        android:fontFamily="@font/lato_bold"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="16dp"
+                        android:textSize="12dp"/>
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_x_min"
+                        android:layout_gravity="end|top"
+                        android:scaleType="fitXY"
+                        android:elevation="5dp"
+                        android:layout_marginTop="-4dp"
+                        android:layout_marginEnd="10dp"/>
+                </FrameLayout>
+
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/new_text_color"
+            android:layout_marginHorizontal="8dp"
+            android:layout_marginTop="10dp"/>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="8dp">
+            <RelativeLayout
+                android:id="@+id/heading1"
+                android:layout_width="150dp"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_custom_header">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Channel name"
+                    android:textColor="@color/tt_white"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/heading2"
+                android:layout_width="match_parent"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_custom_header"
+                android:layout_marginHorizontal="4dp"
+                android:layout_toEndOf="@id/heading1"
+                android:layout_toStartOf="@id/heading3">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Country"
+                    android:textColor="@color/tt_white"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+            <RelativeLayout
+                android:id="@+id/heading3"
+                android:layout_width="110dp"
+                android:layout_height="35dp"
+                android:background="@drawable/bg_custom_header"
+                android:layout_alignParentEnd="true">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/lato_bold"
+                    android:text="Language"
+                    android:textColor="@color/tt_white"
+                    android:textSize="15dp" />
+            </RelativeLayout>
+        </RelativeLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/rvIPTVChannel"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:listitem="@layout/item_iptv_channel"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"/>
+
+    </LinearLayout>
+
+    <com.facebook.shimmer.ShimmerFrameLayout
+        android:id="@+id/shimmerLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:layout_marginTop="15dp"
+        android:orientation="vertical"
+        app:shimmer_duration="800"
+        android:layout_below="@id/includedToolbar"
+        android:visibility="gone"
+        android:layout_above="@+id/bannerContainer">
+        <include layout="@layout/data_placeholder_layout" />
+    </com.facebook.shimmer.ShimmerFrameLayout>
+    <FrameLayout
+        android:id="@+id/bannerContainer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#E2E2E2" />
+
+    <eightbitlab.com.blurview.BlurView
+        android:id="@+id/blurView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:elevation="5dp"
+        android:layout_centerInParent="true"
+        android:visibility="invisible"
+        app:blurOverlayColor="@color/ia_endcard_gray">
+
+        <!--Any child View here, TabLayout for example. This View will NOT be blurred -->
+
+    </eightbitlab.com.blurview.BlurView>
+</RelativeLayout>

@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<defaultsMap>
+    <entry>
+        <key>yearly_subscription_type</key>
+        <value>com.sensustech.mytvcast.1year</value>
+    </entry>
+    <entry>
+        <key>GPS134_onboarding_flag</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>GPS134_paymentcard_flag</key>
+        <value>false</value>
+    </entry>
+    <entry>
+        <key>GPS134_price_plan</key>
+        <value>yearlysub_standard</value>
+    </entry>
+</defaultsMap>

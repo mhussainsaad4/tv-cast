@@ -1,0 +1,95 @@
+buildscript {
+    repositories {
+        google()
+        jcenter()
+    }
+    dependencies {
+        classpath 'com.android.tools.build:gradle:7.2.1'
+       // classpath 'org.robolectric:robolectric-gradle-plugin:1.1.0'
+    }
+}
+
+allprojects {
+    repositories {
+        jcenter()
+    }
+}
+
+String whisperplayLibs = '../lib'
+
+apply plugin: 'com.android.library'
+//apply plugin: 'org.robolectric'
+apply plugin: 'jacoco'
+
+
+jacoco {
+    toolVersion = "0.7.1.201405082137"
+}
+
+android {
+    compileSdkVersion 22
+    buildToolsVersion '22.0.1'
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+    }
+
+    sourceSets {
+        main {
+            manifest.srcFile 'AndroidManifest.xml'
+            java.srcDirs = [
+                    'src',
+                    'core/src',
+                    'modules/google_cast/src',
+                    'modules/firetv/src',
+            ]
+            resources.srcDirs = ['src']
+            aidl.srcDirs = ['src']
+            renderscript.srcDirs = ['src']
+            res.srcDirs = ['res']
+            assets.srcDirs = ['assets']
+        }
+        test {
+            java.srcDirs = [
+                    'core/test/src',
+                    'modules/google_cast/test/src',
+                    'modules/firetv/test/src',
+            ]
+        }
+    }
+    buildTypes {
+        debug {
+            testCoverageEnabled = true
+        }
+        release {
+            minifyEnabled false
+        }
+    }
+    android {
+        lintOptions {
+            abortOnError false
+        }
+    }
+}
+
+android.testOptions.unitTests.all {
+     include '**/*Test.class'
+ }
+
+dependencies {
+
+    implementation files(whisperplayLibs + '/AmazonFling.jar')
+
+    implementation files('core/libs/Java-WebSocket-1.3.7.jar')
+    implementation files('core/libs/javax.jmdns_3.4.1-patch2.jar')
+    implementation fileTree(dir: 'modules/firetv/libs', include: '*.jar')
+    implementation 'com.google.android.gms:play-services-cast:19.0.0'
+    implementation 'androidx.appcompat:appcompat:1.0.2'
+    implementation 'androidx.annotation:annotation:1.0.2'
+
+}
+
+//apply from: 'maven-push.gradle'

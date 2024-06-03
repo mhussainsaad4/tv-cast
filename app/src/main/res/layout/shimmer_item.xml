@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/new_grey_color"
+        android:layout_alignParentTop="true"/>
+
+    <ImageView
+        android:id="@+id/ivFavBtn"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:src="@drawable/ic_fav_fill"
+        android:padding="8dp"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="12dp"
+        app:tint="@color/new_grey_color"/>
+
+    <TextView
+        android:id="@+id/tvChannelName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_toStartOf="@id/ivFlagIcon"
+        android:background="@color/new_grey_color"
+        android:textColor="@color/new_text_color"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="14dp"
+        android:layout_centerVertical="true"
+        android:layout_toEndOf="@id/ivFavBtn"
+        android:paddingHorizontal="10dp"
+        android:inputType="text"
+        android:maxLines="2"
+        android:layout_marginEnd="20dp"/>
+
+    <TextView
+        android:id="@+id/ivFlagIcon"
+        android:layout_width="50dp"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginEnd="30dp"
+        android:layout_toStartOf="@id/tvLanguage"
+        android:background="@color/new_grey_color"/>
+
+    <TextView
+        android:id="@+id/tvLanguage"
+        android:layout_width="120dp"
+        android:layout_height="wrap_content"
+        android:background="@color/new_grey_color"
+        android:fontFamily="@font/inter_regular"
+        android:textSize="14dp"
+        android:layout_centerVertical="true"
+        android:layout_alignParentEnd="true"
+        android:paddingHorizontal="5dp"
+        android:gravity="center_horizontal"
+        android:inputType="text"
+        android:maxLines="2"
+        android:layout_marginEnd="20dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/i_home"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_prem"
+        android:icon="@drawable/i_premium"
+        android:title="Premium" />
+    <item
+        android:id="@+id/nav_restore"
+        android:icon="@drawable/i_restore"
+        android:title="Restore Purchases" />
+    <item
+        android:id="@+id/nav_share"
+        android:icon="@drawable/i_share"
+        android:title="Share App" />
+    <item
+        android:id="@+id/nav_rate"
+        android:icon="@drawable/i_rate"
+        android:title="Rate Us" />
+    <item
+        android:id="@+id/nav_contact"
+        android:icon="@drawable/i_contact"
+        android:title="Contact Us" />
+    <item
+        android:id="@+id/nav_term_of_use"
+        android:icon="@drawable/i_term_of_use"
+        android:title="Terms &amp; Conditions" />
+    <item
+        android:id="@+id/nav_policy"
+        android:icon="@drawable/i_policy"
+        android:title="Privacy Policies" />
+
+</menu>

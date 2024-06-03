@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:descendantFocusability="blocksDescendants"
+    android:layout_marginTop="?android:actionBarSize"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scroll"
+        android:scrollbars="vertical"
+        android:scrollbarFadeDuration="1000"
+        android:layout_width="match_parent"
+        android:layout_above="@+id/bannerContainer"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.google.android.material.card.MaterialCardView
+                android:id="@+id/cvMirroring"
+                android:layout_width="match_parent"
+                android:layout_height="90dp"
+                android:theme="@style/Theme.MaterialComponents.Light.NoActionBar"
+                android:layout_marginHorizontal="15dp"
+                app:cardCornerRadius="45dp"
+                android:layout_marginTop="20dp"
+                app:cardElevation="8dp"
+                app:strokeWidth="1dp"
+                app:strokeColor="@color/new_grey_color">
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+
+                    <ImageView
+                        android:id="@+id/ivIcon1"
+                        android:layout_width="48dp"
+                        android:layout_height="48dp"
+                        android:src="@drawable/ic_screen_mirroring_new"
+                        android:layout_centerVertical="true"
+                        android:layout_marginStart="30dp"/>
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_toEndOf="@id/ivIcon1"
+                        android:orientation="vertical"
+                        android:layout_marginStart="15dp"
+                        android:layout_centerVertical="true">
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Screen Mirroring"
+                            android:fontFamily="@font/lato_bold"
+                            android:textColor="@color/new_text_color"
+                            android:textSize="14dp"/>
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Replicate your phone's screen on Chromecast TV"
+                            android:fontFamily="@font/inter_regular"
+                            android:textColor="@color/new_text_color"
+                            android:textSize="13dp"/>
+                    </LinearLayout>
+                    <ImageView
+                        android:id="@+id/ivPremium"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentStart="true"
+                        android:layout_alignParentTop="true"
+                        android:src="@drawable/ic_premium" />
+                </RelativeLayout>
+            </com.google.android.material.card.MaterialCardView>
+
+            <com.blure.complexview.ComplexView
+                android:id="@+id/cvBannerCard"
+                android:layout_width="match_parent"
+                android:layout_height="180dp"
+                android:layout_marginHorizontal="10dp"
+                app:cardCornerRadius="40dp"
+                android:layout_marginTop="10dp"
+                app:shadow="true"
+                app:shadowColor="#006AEF"
+                app:shadowSpread="2"
+                app:radius="40dp"
+                app:bottomLeftRadius="40dp"
+                android:layout_below="@id/cvMirroring">
+                <androidx.cardview.widget.CardView
+                    android:layout_width="match_parent"
+                    android:layout_margin="2dp"
+                    app:cardCornerRadius="40dp"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:background="@drawable/bg_banner_image"
+                        android:layout_height="match_parent">
+                        <ImageView
+                            android:id="@+id/ivIcon"
+                            android:layout_width="48dp"
+                            android:layout_height="48dp"
+                            android:src="@drawable/ic_tv_new"
+                            android:layout_centerVertical="true"
+                            android:layout_marginStart="30dp"/>
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toEndOf="@id/ivIcon"
+                            android:orientation="vertical"
+                            android:layout_marginStart="15dp"
+                            android:layout_centerVertical="true">
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="IPTV"
+                                android:fontFamily="@font/lato_bold"
+                                android:textColor="@color/new_text_color"
+                                android:textSize="14dp"/>
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Broadcast\nIPTV channels"
+                                android:fontFamily="@font/inter_regular"
+                                android:textColor="@color/new_text_color"
+                                android:textSize="13dp"/>
+                        </LinearLayout>
+                        <ImageView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:layout_alignParentTop="true"
+                            android:src="@drawable/ic_premium" />
+                    </RelativeLayout>
+                </androidx.cardview.widget.CardView>
+            </com.blure.complexview.ComplexView>
+
+            <RelativeLayout
+                android:id="@+id/rel_ads"
+                android:visibility="gone"
+                android:layout_width="match_parent"
+                android:layout_height="360dp"
+                android:layout_below="@id/cvBannerCard"
+                android:background="#E2E2E2"
+                android:layout_marginTop="5dp">
+
+                <FrameLayout
+                    android:layout_marginTop="15dp"
+                    android:layout_marginLeft="20dp"
+                    android:layout_marginRight="20dp"
+                    android:id="@+id/fl_adplaceholder"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:background="#E2E2E2"/>
+
+            </RelativeLayout>
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler"
+                android:clipToPadding="false"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_below="@id/rel_ads"
+                android:padding="10dp"
+                tools:listitem="@layout/recycler_item"/>
+
+        </RelativeLayout>
+
+    </androidx.core.widget.NestedScrollView>
+
+    <FrameLayout
+        android:id="@+id/bannerContainer1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_gravity="bottom"
+        android:background="#E2E2E2" />
+
+</RelativeLayout>
